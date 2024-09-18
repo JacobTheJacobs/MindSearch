@@ -78,3 +78,14 @@ internlm_silicon = dict(type=GPTAPI,
                         max_new_tokens=8192,
                         repetition_penalty=1.02,
                         stop_words=['<|im_end|>'])
+
+internlm_ollama = dict(type=LMDeployClient,
+                       model_name='internlm2',
+                       url='http://127.0.0.1:11434',
+                       meta_template=INTERNLM2_META,
+                       top_p=0.8,
+                       top_k=1,
+                       temperature=0,
+                       max_new_tokens=8192,
+                       repetition_penalty=1.02,
+                       stop_words=['<|im_end|>'])
